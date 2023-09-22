@@ -1,6 +1,7 @@
-import Showcase from './Showcase';
-import BaseStats from './BaseStats';
-import './App.css';
+import Showcase from "./Showcase.js";
+import BaseStats from "./BaseStats.js";
+import PokeMoves from "./PokeMoves.js";
+import "./App.css";
 
 function App() {
   const baseStats = {
@@ -9,19 +10,20 @@ function App() {
     defense: 48,
     spAttack: 65,
     spDef: 66,
-    speed: 47
+    speed: 47,
   };
 
   const handleClick = () => {
     alert(
-      `Special Stats:\n\tSpecial Attack: ${baseStats.spAttack}\n\tSpecial Defense: ${baseStats.spDef}`
+      `Special Stats:\n\tSpecial Attack: ${baseStats.spAttack}\n\tSpecial Defense: ${baseStats.spDef}`,
     );
   };
 
   return (
-    <div className='main-wrapper background'>
+    <div className="main-wrapper background">
       <Showcase />
       <BaseStats clicker={handleClick} stats={baseStats} />
+      <PokeMoves />
     </div>
   );
 }
